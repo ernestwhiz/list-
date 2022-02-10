@@ -1,0 +1,23 @@
+print("Listing of Cities & Zip Codes in CT, United States")
+header = ["City#", "City Name", "Zip Code"]
+compList = [[1, 'Bristol', '06010'],
+        [2, 'Manchester', '06040'],
+        [3, 'New Britain', '06051'],
+        [4, 'Windsor', '06095'],
+        [5, 'Hartford', '06106'],]
+      
+format_row = "{:<15}" * (len(header))
+
+print(format_row.format(*header))
+for header, row in zip(header, compList):
+    print(format_row.format(*row))
+    
+    
+    
+    #################################
+    # Second Example
+    #################################
+    
+    myList = [['City#',1, 2, 3],['City Name','West Haven', 'Barnford', 'New Haven'], ['Zip Code',8, 3, 10]]
+for num,name,zipCode in zip(*myList):
+	print(num,name,zipCode)
